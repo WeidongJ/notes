@@ -65,4 +65,23 @@ zip，unzip
 
     unzip test.zip # 解压
     unzip -d test2/ test.zip # 解压到指定目录
-    
+
+gzip，gunzip
+
+    gzip 1.tar # 压缩源文件（源文件不存在）
+
+## 文本处理
+
+grep（global regular expressions print）：用正则处理文本
+
+    grep read readme.txt
+
+sed
+
+     sed 's/happy/pleasure/2' 2.txt # 用pleasure替换一行中第二次出现的happy
+     sed 's/happy/pleasure/g' 2.txt # 替换所有pleasure
+
+     sed -n 's/pleasure/happy/p' 2.txt # 只展示替换的内容
+     sed -n 's/happy/pleasure/g' 2.txt # 不展示文本
+
+     sed 's/happy/pleasure/w 3.txt' 2.txt # 保存匹配的内容至3.txt

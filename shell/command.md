@@ -85,3 +85,28 @@ sed
      sed -n 's/happy/pleasure/g' 2.txt # 不展示文本
 
      sed 's/happy/pleasure/w 3.txt' 2.txt # 保存匹配的内容至3.txt
+
+     sed '2,3d' 1.txt # 删除sed流中（屏幕显示）的指定行（原始文件没做任何改变）。
+
+     sed '2i\study together.' 1.txt # sed流指定行前插入内容 --i
+     sed '2a\study together.' 1.txt # sed流指定行后插入内容 --a
+
+     sed '2i\study together.\
+     love each other.' 1.txt # 数据流中插入多行。
+
+     sed '2c\wo shi jiweidong.' 1.txt # 替换数据流中的指定行 --c
+
+     sed 'y/123/789/' 1.txt # 数据流中把1，2，3分别替换成7，8，9 --y
+
+     sed '1,2w test.txt' 1.txt # 将文本中指定行的内容写入文件中。--w
+
+     sed '3r test.txt' 1.txt # 将test中的文本插入到数据流中的指定行（3） --r
+
+     sed '2q' 1.txt # 第一次匹配后退出 --q
+
+sed address
+
+    sed '2,3s/love/like/g' 1.txt # 查找address 2,3 指定的区间内容
+
+&
+    sed '/line/{s//\<&\>/1}' 1.txt # &会将line替换成<line>

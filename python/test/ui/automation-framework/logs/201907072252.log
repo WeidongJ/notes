@@ -1,0 +1,12 @@
+2019-07-07 22:52:58,579 - browser_engine - INFO - browser_type: chrome
+2019-07-07 22:52:58,580 - browser_engine - INFO - Test server: https://www.baidu.com
+2019-07-07 22:53:00,934 - browser_engine - INFO - Starting chrome browser
+2019-07-07 22:53:03,312 - browser_engine - INFO - Open url is: https://www.baidu.com
+2019-07-07 22:53:03,314 - browser_engine - INFO - Set implicitly wait 5 seconds.
+2019-07-07 22:53:03,329 - basepage - INFO - find element by id: kw
+2019-07-07 22:53:03,517 - basepage - INFO - input text: selenium success.
+2019-07-07 22:53:03,531 - basepage - INFO - find element by xpath: //input[@id='su']
+2019-07-07 22:53:03,598 - basepage - INFO - click element: xpath=>//input[@id='su'] success.
+2019-07-07 22:53:05,979 - basepage - INFO - get screenshot d:/WeidongJ/notes/python/test/ui/automation-framework/screenshots/201907072253.png success.
+2019-07-07 22:53:05,980 - basepage - INFO - get page title success.
+2019-07-07 22:53:05,986 - baidusearch - INFO - test pass.

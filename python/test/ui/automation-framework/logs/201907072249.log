@@ -1,0 +1,9 @@
+2019-07-07 22:49:25,065 - browser_engine - INFO - browser_type: ie
+2019-07-07 22:49:25,066 - browser_engine - INFO - Test server: https://www.baidu.com
+2019-07-07 22:49:26,191 - browser_engine - INFO - Starting ie browser
+2019-07-07 22:49:29,114 - browser_engine - INFO - Open url is: https://www.baidu.com
+2019-07-07 22:49:29,127 - browser_engine - INFO - Set implicitly wait 5 seconds.
+2019-07-07 22:49:29,257 - basepage - INFO - find element by id: kw
+2019-07-07 22:50:10,381 - basepage - INFO - input text: selenium success.
+2019-07-07 22:50:10,530 - basepage - INFO - find element by xpath: //input[@id='su']
+2019-07-07 22:50:11,165 - basepage - INFO - click element: xpath=>//input[@id='su'] success.

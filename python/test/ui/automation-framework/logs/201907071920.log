@@ -1,0 +1,6 @@
+2019-07-07 19:20:57,976 - browser_engine - INFO - browser_type: Chrome
+2019-07-07 19:20:57,977 - browser_engine - INFO - Test server: https://www.baidu.com
+2019-07-07 19:21:00,341 - browser_engine - INFO - Starting chrome browser
+2019-07-07 19:21:04,794 - browser_engine - INFO - Open url is: https://www.baidu.com
+2019-07-07 19:21:04,796 - browser_engine - INFO - Set implicitly wait 5 seconds.
+2019-07-07 19:21:05,985 - baidu_search - INFO - Test pass.

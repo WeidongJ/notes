@@ -110,3 +110,49 @@ sed address
 
 &
     sed '/line/{s//\<&\>/1}' 1.txt # &会将line替换成<line>
+
+    sed '/first/{N ; s/\n/ /}' data2.txt # N命令将下一行合并到一行，并用s命令替换掉换行 --N
+
+    sed 'N
+    > s/System\nAdministrator/Desktop\nUser/
+    > s/System Administrator/Desktop User/
+    > ' data3.txt # 替换短语出现在多行的情况
+
+`D` 多行删除；
+
+## awk
+
+基本格式：`awk 'regular{command}' file`
+
+    awk '/^$/{print "Hello World"}' data3.txt # 查找空白行，匹配到输出Hello World
+awk使用变量分配给文本中发现的数据字段：
+
+* $0 代表整个文本行；
+* $1 代表文本行中的第 1 个数据字段；
+* $2 代表文本行中的第 2 个数据字段；
+* $n 代表文本行中的第 n 个数据字段
+
+    awk '{print $1}' data3.txt
+
+命令字段可以使用多个命令
+
+    awk '{$1="hefei";print $0}' data3.txt # 赋值个第一个数据字段 $1=xx,并打印整行
+
+从文件中读取awk命令
+
+    awk -F: -f awk.sh data3.txt
+BEGIN会强制 awk 在读取数据前执行该关键字后指定的脚本命令：
+
+    awk 'BEGIN{print "ilove you"} {print $1}' data3.txt
+END 会强制 awk 在读取数据后执行该关键字后指定的脚本命令：
+    awk 'END{print  "ilove you"} {print $1}' data3.txt
+
+分隔符变量
+
+![awk keywork](img/command-awk.png)
+
+    awk 'BEGIN{FS=",";OFS="-"}{print $1，$2,$3,$4}' data4.txt # 修改输入分隔符为","，设置输出分隔符为"-"
+
+FIELDWIDTHS 变量允许用户不依赖分隔符来读取数字，通过字段中分配的数字来分割字段：例如：
+
+    awk 'BEGIN{FIELDWIDTHS="5 5 5"}{print $1,$2,$3}' data4.txt # 按照 5 5 5个字符形式分割。
